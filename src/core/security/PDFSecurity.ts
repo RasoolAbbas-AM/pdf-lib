@@ -2,8 +2,7 @@ import CryptoJS from 'crypto-js';
 import PDFDocument from 'src/api/PDFDocument';
 import PDFDict from '../objects/PDFDict';
 import { LiteralObject } from '../PDFContext';
-
-const Buffer = require("buffer");
+import { Buffer } from "buffer";
 
 type WordArray = CryptoJS.lib.WordArray;
 type generateRandomWordArrayFn = (bytes: number) => WordArray;
