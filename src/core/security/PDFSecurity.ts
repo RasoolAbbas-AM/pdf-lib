@@ -1,5 +1,4 @@
 import CryptoJS from 'crypto-js';
-import saslprep from 'saslprep';
 import PDFDocument from 'src/api/PDFDocument';
 import PDFDict from '../objects/PDFDict';
 import { LiteralObject } from '../PDFContext';
@@ -658,7 +657,8 @@ const processPasswordR2R3R4 = (password = '') => {
 };
 
 const processPasswordR5 = (password = '') => {
-  password = unescape(encodeURIComponent(saslprep(password)));
+  // password = unescape(encodeURIComponent(saslprep(password)));
+
   const length = Math.min(127, password.length);
   const out = Buffer.alloc(length);
 
