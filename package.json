@@ -40,7 +40,6 @@
     "get:version": "node --eval 'console.log(require(`./package.json`).version)'",
     "clean": "rimraf ts3.4 build cjs dist es scratchpad/build coverage tsBuildInfo.json apps/node-build apps/node/tsBuildInfo.json isolate*.log flamegraph.html out.pdf",
     "typecheck": "tsc --noEmit --incremental false --tsBuildInfoFile null",
-    "prepare": "yarn build",
     "test": "jest --config jest.json --runInBand",
     "testw": "jest --config jest.json --watch",
     "testc": "jest --config jest.json --coverage && open coverage/index.html",
@@ -93,10 +92,8 @@
     "@pdf-lib/standard-fonts": "^1.0.0",
     "@pdf-lib/upng": "^1.0.1",
     "@types/crypto-js": "^4.0.2",
-    "@types/saslprep": "^1.0.1",
     "crypto-js": "^4.1.1",
     "pako": "^1.0.11",
-    "saslprep": "^1.0.3",
     "tslib": "^1.11.1"
   },
   "devDependencies": {
